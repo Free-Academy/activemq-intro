@@ -48,7 +48,7 @@
 
   （1）P2P模式
 
-  ![](/Users/bethanwang/师创——工作/专题课/ActiveMQ/pic/p2p模式.png)
+  ![图1-1 p2p模式示意图](https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/pic/2/p2p%E6%A8%A1%E5%BC%8F.png)
 
   ​																						图1-1 p2p模式示意图
 
@@ -64,7 +64,7 @@
 
   （2）Pub/Sub模式
 
-  ![](/Users/bethanwang/师创——工作/专题课/ActiveMQ/pic/pub:sub模式.png)
+  ![图1-2 pub/sub模式示意图](https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/pic/2/pub:sub%E6%A8%A1%E5%BC%8F.png)
 
   ​																						图1-2 pub/sub模式示意图
 
