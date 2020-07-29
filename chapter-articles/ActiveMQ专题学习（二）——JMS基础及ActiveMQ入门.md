@@ -13,21 +13,21 @@
 
 
 
-\* [ActiveMQ专题学习（二）——JMS基础及ActiveMQ入门](#activemq专题学习二jms基础及activemq入门)
+* [ActiveMQ专题学习（二）——JMS基础及ActiveMQ入门](#activemq专题学习二jms基础及activemq入门)
 
-   \* [1.	JMS 基础](#1jms-基础)
+   * [1.	JMS 基础](#1jms-基础)
 
-​     \* [1.1.	JMS 概念](#11jms-概念)
+​     * [1.1.	JMS 概念](#11jms-概念)
 
-​     \* [1.2.	JMS 消息模型](#12jms-消息模型)
+​     * [1.2.	JMS 消息模型](#12jms-消息模型)
 
-​     \* [1.3.	JMS 编程模型](#13jms-编程模型)
+​     * [1.3.	JMS 编程模型](#13jms-编程模型)
 
-   \* [2.	ActiveMQ 入门](#2activemq-入门)
+   * [2.	ActiveMQ 入门](#2activemq-入门)
 
-​     \* [2.1.	“P2P模式”入门案例](#21p2p模式入门案例)
+​     * [2.1.	“P2P模式”入门案例](#21p2p模式入门案例)
 
-​     \* [2.2.	“Pub/Sub模式”入门案例](#22pubsub模式入门案例)
+​     * [2.2.	“Pub/Sub模式”入门案例](#22pubsub模式入门案例)
 
 
 
