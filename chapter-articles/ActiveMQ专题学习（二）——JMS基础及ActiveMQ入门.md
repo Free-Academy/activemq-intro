@@ -46,7 +46,7 @@
 
   
 
-  （1）P2P模式
+  **（1）P2P模式**
 
   <img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/p2p%E6%A8%A1%E5%BC%8F.png" alt="图1-2" style="zoom:40%;" />
 
@@ -62,7 +62,7 @@
 
   
 
-  （2）Pub/Sub模式
+  **（2）Pub/Sub模式**
 
   <img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/pub%3Asub%E6%A8%A1%E5%BC%8F.png" alt="图1-2" style="zoom:40%;" />
 
