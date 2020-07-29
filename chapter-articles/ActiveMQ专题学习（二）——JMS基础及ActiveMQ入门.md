@@ -16,8 +16,7 @@
 * [ActiveMQ专题学习（二）——JMS基础及ActiveMQ入门](#activemq专题学习二jms基础及activemq入门)
 
    * [1.	JMS 基础](#1jms-基础)
-
-​     - [1.1.	JMS 概念](#11jms-概念)
+      * [1.1.	JMS 概念](#11jms-概念)
 
 ​     - [1.2.	JMS 消息模型](#12jms-消息模型)
 
