@@ -7,21 +7,22 @@
 >   - 理解P2P消息模式；
 >   - 理解Pub/Sub消息模式。
 >- ActiveMQ 入门：
->   - 通过编程，熟练实现“P2P模式”入门案例；
->   - 通过编程，熟练实现“Pub/Sub模式”入门案例；
->   - 梳理编程模型，掌握“P2P模式”和“Pub/Sub模式”编程思想。
+>   - Queue编码实践；
+>   - Topic编码实践。
 
 
 
 * [ActiveMQ专题学习（二）——JMS基础及ActiveMQ入门](#activemq专题学习二jms基础及activemq入门)
 * [1.	JMS 基础](#1jms-基础)
+     
      * [1.1.	JMS 概念](#11jms-概念)
      * [1.2.	JMS 消息模型](#12jms-消息模型)
      
 * [2.	ActiveMQ 入门](#2activemq-入门)
-     * [2.1.	“P2P模式”入门实践](#21p2p模式实践)
-     * [2.2.	“Pub/Sub模式”入门实践](#22pubsub模式实践)
-     * [2.3.	编程模型](#23编程模型)
+     * [2.1.	Queue实践](#21Queue实践)
+     * [2.2.	Topic实践](#22Topic实践)
+     
+     
 
 
 ## 1.	JMS 基础
@@ -117,7 +118,7 @@
 
 ​																									图2-1 项目结构图
 
-### 2.1.	“P2P模式”实践
+### 2.1.	Queue实践
 
 ​		`QueueProducer`代码：
 
@@ -281,7 +282,7 @@ public class Broker {
 
 ​																								图 2-4
 
-### 2.2.	“Pub/Sub模式”实践
+### 2.2.	Topic实践
 
 ​		`TopicProducer`代码：
 
@@ -440,16 +441,6 @@ System.out.println("TopicConsumerB 接收到消息：" + text);
 <img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CTopicConsumerB%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" style="zoom:50%;" />
 
 ​																								图 2-9
-
-### 2.3.	编程模型
-
-
-
-
-
-
-
-
 
 
 
