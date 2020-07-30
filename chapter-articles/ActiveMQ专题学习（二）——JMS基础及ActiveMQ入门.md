@@ -406,7 +406,7 @@ System.out.println("TopicConsumerB 接收到消息：" + text);
 
 - `Number Of Consumers`：订阅者数量，因为我们打开两个消费者（`TopicConsumerA`和`TopicConsumerB`），所以这里显示有2个两个消费者已链接。
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicConsumer效果.png" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CTopicConsumer%E6%95%88%E6%9E%9C.png" style="zoom:80%;" />
 
 ​																								图 2-5
 
@@ -417,7 +417,7 @@ System.out.println("TopicConsumerB 接收到消息：" + text);
 - `Messages Enqueued `：入列消息数量为：1，因为发布者只发布了一条消息；
 - `Messages Dequeued `：出列消息数量为：2，因为有2个订阅者，消息被消费了两次。
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicProducer效果.png" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CTopicProducer%E6%95%88%E6%9E%9C.png" style="zoom:80%;" />
 
 ​																								图 2-6
 
@@ -425,7 +425,7 @@ System.out.println("TopicConsumerB 接收到消息：" + text);
 
 ​		`TopicProducer`控制台打印信息：`TopicProducer 已发布消息：Hello ActiveMQ, Topic`，说明生产者已发送报文内容为`Hello ActiveMQ, Topic`的消息，如图 2-7。
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicProducer控制台输出.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CTopicProducer%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" style="zoom:47%;" />
 
 ​																								图 2-7
 
@@ -433,11 +433,11 @@ System.out.println("TopicConsumerB 接收到消息：" + text);
 
 `TopicConsumerA 接收到消息：Hello ActiveMQ, Topic`、`TopicConsumerB 接收到消息：Hello ActiveMQ, Topic`，说明`TopicConsumerA`和`TopicConsumerB`都从订阅的`TEST_TOPIC_01`中消费了一条消息，接收到的消息内容都是：`Hello ActiveMQ, Topic`，其实就是上文中`TopicProducer`发布的消息内容，如图 2-8和图 2-9。
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicConsumerA控制台输出.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CTopicConsumerA%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" width="50%" height="50%" />
 
 ​																								图 2-8
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicConsumerB控制台输出.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CTopicConsumerB%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" style="zoom:50%;" />
 
 ​																								图 2-9
 
