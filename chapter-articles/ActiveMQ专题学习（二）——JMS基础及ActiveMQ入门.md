@@ -113,7 +113,7 @@
 
 ​		项目结构如图2-1:
 
-<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/activemq-01%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/activemq-01%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png" style="zoom:50%;" />
 
 ​																									图2-1 项目结构图
 
