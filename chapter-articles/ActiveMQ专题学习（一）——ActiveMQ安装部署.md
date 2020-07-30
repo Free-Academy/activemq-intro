@@ -57,6 +57,7 @@ ActiveMQ启动后，在浏览器中输入：[http:localhost:8161]("http:localhos
 图 3-1
 
 
+
 本文完！
 
 下一篇：[ActiveMQ专题学习（二）——JMS基础及ActiveMQ入门实践](https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/ActiveMQ%E4%B8%93%E9%A2%98%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94JMS%E5%9F%BA%E7%A1%80%E5%8F%8AActiveMQ%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5.md)
