@@ -267,7 +267,7 @@ public class Broker {
 
 ​		**（2）运行`QueueConsumer`**
 
-​		运行`QueueConsumer`，通过`ActiveMQ`管理界面查看效果，如图：2-3:
+​		运行`QueueConsumer`，通过`ActiveMQ`管理界面查看效果，如图 2-3:
 
 - `Messages Dequeued `：出列消息数量为：1，即有一条消息被消费了，每次又一条消息被消费，这里就会对应+1；
 
@@ -283,9 +283,163 @@ public class Broker {
 
 ### 2.2.	“Pub/Sub模式”入门案例
 
+​		`TopicProducer`代码：
 
+```java
+package com.foo.study.activemq.pubsub;
 
+import com.foo.study.activemq.constant.Broker;
+import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.command.ActiveMQTextMessage;
 
+import javax.jms.*;
+
+/**
+ * topic，消息发布者
+ */
+public class TopicProducer {
+
+    public static void main(String[] args) {
+        try {
+            //1. 创建一个链接工厂，实现类为ActiveMQConnectionFactory，通过构造器传入ActiveMQ服务器的地址
+            ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(Broker.TEST_BROKER_URL);
+            //2. 使用ConnectionFactory创建Connection对象
+            Connection connection = connectionFactory.createConnection();
+            //3. 打开链接
+            connection.start();
+            //4. 使用Connection，创建会话对象Session
+            Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+            //5. 使用Session，创建Destination对象，这里使用的"Pub/Sub消息模式"，所以创建的是Topic
+            Destination topic = session.createTopic(Broker.TEST_TOPIC_01_NAME);
+            //6. 使用Session，创建MessageProducer对象
+            MessageProducer producer = session.createProducer(topic);
+            //7. 创建一个TextMessage对象
+            TextMessage textMessage = new ActiveMQTextMessage();
+            textMessage.setText("Hello ActiveMQ, Topic");
+            //8. 发送消息
+            producer.send(textMessage);
+            System.out.println("TopicProducer 已发布消息：Hello ActiveMQ, Topic");
+            //9. 关闭资源
+            producer.close();
+            session.close();
+            connection.close();
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+```
+
+​		`TopicConsumerA`代码：
+
+```java
+package com.foo.study.activemq.pubsub;
+
+import com.foo.study.activemq.constant.Broker;
+import org.apache.activemq.ActiveMQConnectionFactory;
+
+import javax.jms.*;
+import java.io.IOException;
+
+/**
+ * topic，消息订阅者A
+ */
+public class TopicConsumerA {
+
+    public static void main(String[] args) {
+        try {
+            //1. 创建一个链接工厂，实现类为ActiveMQConnectionFactory，通过构造器传入ActiveMQ服务器的地址
+            ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(Broker.TEST_BROKER_URL);
+            //2. 使用ConnectionFactory创建Connection对象
+            Connection connection = connectionFactory.createConnection();
+            //3. 打开链接
+            connection.start();
+            //4. 使用Connection，创建会话对象Session
+            Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+            //5. 使用Session，创建Destination对象，这里使用的"Pub/Sub消息模式"，所以创建的是Topic
+            Destination topic = session.createTopic(Broker.TEST_TOPIC_01_NAME);
+            //6. 使用Session，创建MessageConsumer对象
+            MessageConsumer consumer = session.createConsumer(topic);
+            //7. 为consumer设置消息监听器，用来接收消息
+            MessageListener listener = new MessageListener() {
+                public void onMessage(Message message) {
+                    try {
+                        if (message instanceof TextMessage) {
+                            TextMessage textMessage = (TextMessage) message;
+                            String text = textMessage.getText();
+                            System.out.println("TopicConsumerA 接收到消息：" + text);
+                        }
+                    } catch (JMSException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            //8. 为Consumer对象设置监听器
+            consumer.setMessageListener(listener);
+            //等待键盘输入，再继续执行
+            try {
+                System.in.read();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //9. 关闭资源
+            consumer.close();
+            session.close();
+            connection.close();
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+​		`TopicConsumerB`代码和`TopicConsumerA`代码基本一样，只是`MessageListener`中的打印语句有所不同：
+
+```java
+System.out.println("TopicConsumerB 接收到消息：" + text);
+```
+
+​		**（1）运行`TopicConsumerA`和`TopicConsumerB`**
+
+​		运行`TopicConsumerA`和`TopicConsumerB`，打开`ActiveMQ`管理界面，如图 2-5:
+
+- `Number Of Consumers`：订阅者数量，因为我们打开两个消费者（`TopicConsumerA`和`TopicConsumerB`），所以这里显示有2个两个消费者已链接。
+
+<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicConsumer效果.png" style="zoom:80%;" />
+
+​																								图 2-5
+
+​		**（2）运行`TopicProducer`**
+
+​		运行`TopicProducer`，打开`ActiveMQ`管理界面，如图 2-6:
+
+- `Messages Enqueued `：入列消息数量为：1，因为发布者只发布了一条消息；
+- `Messages Dequeued `：出列消息数量为：2，因为有2个订阅者，消息被消费了两次。
+
+<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicProducer效果.png" style="zoom:80%;" />
+
+​																								图 2-6
+
+​		**（3）控制台打印信息**
+
+​		`TopicProducer`控制台打印信息：`TopicProducer 已发布消息：Hello ActiveMQ, Topic`，说明生产者已发送报文内容为`Hello ActiveMQ, Topic`的消息，如图 2-7。
+
+<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicProducer控制台输出.png" style="zoom:50%;" />
+
+​																								图 2-7
+
+​		`TopicConsumerA`和`TopicConsumerB`，控制台分别打印：
+
+`TopicConsumerA 接收到消息：Hello ActiveMQ, Topic`、`TopicConsumerB 接收到消息：Hello ActiveMQ, Topic`，说明`TopicConsumerA`和`TopicConsumerB`都从订阅的`TEST_TOPIC_01`中消费了一条消息，接收到的消息内容都是：`Hello ActiveMQ, Topic`，其实就是上文中`TopicProducer`发布的消息内容，如图 2-8和图 2-9。
+
+<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicConsumerA控制台输出.png" style="zoom:50%;" />
+
+​																								图 2-8
+
+<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行TopicConsumerB控制台输出.png" style="zoom:50%;" />
+
+​																								图 2-9
 
 ### 2.3.	编程模型
 
