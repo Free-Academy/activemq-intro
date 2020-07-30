@@ -275,7 +275,7 @@ public class Broker {
 
 ​																								图 2-3
 
-​		查看控制台输出，`Consumer接收到的信息：Hello ActiveMQ`，说明消息已经被消费端成功消费，如图2-4所示。
+​		查看控制台输出：`Consumer接收到的信息：Hello ActiveMQ`，说明消息已经被消费端成功消费，如图2-4所示。
 
 <img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CQueueConsumer%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" style="zoom:50%;" />
 
