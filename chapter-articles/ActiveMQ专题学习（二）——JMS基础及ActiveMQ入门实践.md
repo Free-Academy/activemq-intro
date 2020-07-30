@@ -14,7 +14,7 @@
 
 * [ActiveMQ专题学习（二）——JMS基础及ActiveMQ入门](#activemq专题学习二jms基础及activemq入门)
 * [1.	JMS 基础](#1jms-基础)
-     
+  
      * [1.1.	JMS 概念](#11jms-概念)
      * [1.2.	JMS 消息模型](#12jms-消息模型)
      
@@ -443,6 +443,12 @@ System.out.println("TopicConsumerB 接收到消息：" + text);
 ​																								图 2-9
 
 
+
+本文完！
+
+上一篇：[ActiveMQ专题学习（一）——ActiveMQ安装部署](https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/ActiveMQ%E4%B8%93%E9%A2%98%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94ActiveMQ%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.md)
+
+下一篇：[ActiveMQ专题学习（三）——Java中ActiveMQ的使用](https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/ActiveMQ%E4%B8%93%E9%A2%98%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94Java%E4%B8%ADActiveMQ%E7%9A%84%E4%BD%BF%E7%94%A8.md)
 
 
 
