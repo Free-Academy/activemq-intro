@@ -8,12 +8,12 @@ import javax.jms.*;
 /**
  * queue，消息消费者
  */
-public class Consumer {
+public class QueueConsumer {
 
     public static void main(String[] args) {
         try {
             //1. 创建一个链接工厂，实现类为ActiveMQConnectionFactory，通过构造器传入ActiveMQ服务器的地址
-            ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(Broker.TEST_QUEUE_01_URL);
+            ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(Broker.TEST_BROKER_URL);
             //2. 使用ConnectionFactory创建Connection对象
             Connection connection = connectionFactory.createConnection();
             //3. 打开链接
