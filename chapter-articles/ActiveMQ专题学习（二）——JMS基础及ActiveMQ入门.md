@@ -433,7 +433,7 @@ System.out.println("TopicConsumerB 接收到消息：" + text);
 
 `TopicConsumerA 接收到消息：Hello ActiveMQ, Topic`、`TopicConsumerB 接收到消息：Hello ActiveMQ, Topic`，说明`TopicConsumerA`和`TopicConsumerB`都从订阅的`TEST_TOPIC_01`中消费了一条消息，接收到的消息内容都是：`Hello ActiveMQ, Topic`，其实就是上文中`TopicProducer`发布的消息内容，如图 2-8和图 2-9。
 
-<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CTopicConsumerA%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" width="50%" height="50%" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CTopicConsumerA%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" style="zoom:49%;" />
 
 ​																								图 2-8
 
