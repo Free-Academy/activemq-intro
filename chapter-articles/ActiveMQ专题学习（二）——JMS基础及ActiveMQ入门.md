@@ -113,7 +113,7 @@
 
 ​		项目结构如图2-1:
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/activemq-01项目结构.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/activemq-01%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png" style="zoom:50%;" />
 
 ​																									图2-1 项目结构图
 
@@ -261,7 +261,7 @@ public class Broker {
 - `Messages Enqueued`：已经排队的消息数为：1，即队列接收到的消息数量，每次`TESR_QUEUE_01`接收到一条消息，这里就会对应+1；
 - `TEST_QUEUE_01`：这里如果没有手动通过管理界面创建`TEST_QUEUE_01`，当运行`Producer`时，会自动创建。
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行QueueProducer效果.png" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CQueueProducer%E6%95%88%E6%9E%9C.png" style="zoom:80%;" />
 
 ​																								图 2-2
 
@@ -271,13 +271,13 @@ public class Broker {
 
 - `Messages Dequeued `：出列消息数量为：1，即有一条消息被消费了，每次又一条消息被消费，这里就会对应+1；
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行QueueConsumer效果.png" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CQueueConsumer%E6%95%88%E6%9E%9C.png" style="zoom:80%;" />
 
 ​																								图 2-3
 
 ​		查看控制台输出，`Consumer接收到的信息：Hello ActiveMQ`，说明消息已经被消费端成功消费，如图2-4所示。
 
-<img src="/Users/bethanwang/myspace/Free-Academy/activemq-intro/chapter-articles/pic/2/运行QueueConsumer控制台输出.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/2/%E8%BF%90%E8%A1%8CQueueConsumer%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" style="zoom:50%;" />
 
 ​																								图 2-4
 
