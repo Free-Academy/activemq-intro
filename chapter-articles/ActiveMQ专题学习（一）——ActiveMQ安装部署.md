@@ -14,17 +14,11 @@
 
 这里我们使用经典版（ActiveMQ 5 "Classic"），点击对应的`Download Latest`链接按钮（如图1-1），进入下载界面。
 
-<img src="https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/pic/1/activemq%E5%AE%98%E7%BD%91%E9%A6%96%E9%A1%B5.png" alt="图1-1" style="zoom:70%;" />
-
-​																									图1-1
+<img src="https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/pic/1/activemq%E5%AE%98%E7%BD%91%E9%A6%96%E9%A1%B5.png" alt="图1-1" style="zoom:70%;" />																							图1-1
 
 在下载界面，根据要安装机器的操作系统，选择下载版本，笔者是mac系统下载Unix版本（如图1-2）。
 
-<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/1/activemq%E4%B8%8B%E8%BD%BD%E5%88%97%E8%A1%A8.png" alt="图1-2" style="zoom:70%;" />
-
-
-
-​																									图1-2
+<img src="https://raw.githubusercontent.com/Free-Academy/activemq-intro/master/chapter-articles/pic/1/activemq%E4%B8%8B%E8%BD%BD%E5%88%97%E8%A1%A8.png" alt="图1-2" style="zoom:70%;" />​																							图1-2
 
 
 
@@ -32,9 +26,7 @@
 
 下载完成后，将`apache-activemq-5.16.0-bin.tar.gz`文件移动要安装的目录下（笔者的安装目录为：`~/dev/`），双击解压，默认解压到`apache-activemq-5.16.0`文件夹，打开`apache-activemq-5.16.0`文件夹，可以看到如图2-1所示结构。
 
-<img src="https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/pic/1/activemq%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84.png" alt="图2-1" style="zoom:50%;" />
-
-​																									图2-1
+<img src="https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/pic/1/activemq%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84.png" alt="图2-1" style="zoom:50%;" />																									图2-1
 
 各个文件夹大概作用：
 
@@ -62,7 +54,7 @@
 ActiveMQ启动后，在浏览器中输入：[http:localhost:8161]("http:localhost:8161")，访问ActiveMQ管理界面，如果提示需要输入密码，用户名和密码都输入：admin，即可看到`ActiveMQ`管理界面（如图3-1），至此`ActiveMQ`已安装完成。
 
 <img src="https://github.com/Free-Academy/activemq-intro/blob/master/chapter-articles/pic/1/activemq%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2.png" alt="图3-1" style="zoom:80%;" />
-
+图 3-1
 
 
 本文完！
