@@ -1,4 +1,4 @@
-# ActiveMQ专题学习（二）——JMS基础及ActiveMQ入门
+# ActiveMQ专题学习（二）——JMS基础及ActiveMQ入门实践
 
 >本节内容主要包含
 >
